@@ -2,7 +2,7 @@
 Scrape Magnet links from http://thepiratebay.la/
 
 
-(https://github.com/ndragon798/Magnet-Scraper/raw/master/Magnet%20Scraper/bin/Release/Magnet%20Scraper.exe)
+[Download](https://github.com/ndragon798/Magnet-Scraper/raw/master/Magnet%20Scraper/bin/Release/Magnet%20Scraper.exe)
 
 
 How to
