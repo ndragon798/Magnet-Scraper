@@ -4,7 +4,7 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        MsgBox("Please Wait this can take a while if you have a large range")
+
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create(TextBox1.Text)
         Dim response As System.Net.HttpWebResponse = request.GetResponse
 
@@ -46,6 +46,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MsgBox("Please Wait this can take a while if you have a large range")
         TextBox2.Text.Replace(" ", "%20")
         Dim x As Integer
         x = NumericUpDown1.Value
