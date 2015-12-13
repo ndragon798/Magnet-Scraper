@@ -8,3 +8,8 @@ c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scra
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.exe
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.xml
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.pdb
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Release\Magnet Scraper.exe.manifest
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Release\Magnet Scraper.application
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.TrustInfo.xml
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.exe.manifest
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.application
