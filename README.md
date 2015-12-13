@@ -1,6 +1,10 @@
 # Magnet-Scraper
 Scrape Magnet links from http://thepiratebay.la/
 
+
+![Download](Magnet Scraper/bin/Release/Magnet Scraper.exe)
+
+
 How to
 
 ![Step 1](Steps/Step1.PNG)
