@@ -1,0 +1,10 @@
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Debug\Magnet Scraper.exe.config
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet_Scraper.Form1.resources
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet_Scraper.Resources.resources
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.vbproj.GenerateResource.Cache
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Debug\Magnet Scraper.exe
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Debug\Magnet Scraper.pdb
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\bin\Debug\Magnet Scraper.xml
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.exe
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.xml
+c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.pdb
