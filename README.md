@@ -8,6 +8,7 @@ To Do List
 #Add proxy support
 #Add custom site search
 #Custom Regex support
+#Add button to clear current list
 
 How to
 
