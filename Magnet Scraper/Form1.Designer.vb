@@ -40,6 +40,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,10 +73,10 @@ Partial Class Form1
         '
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.HorizontalScrollbar = True
-        Me.ListBox2.Location = New System.Drawing.Point(12, 99)
+        Me.ListBox2.Location = New System.Drawing.Point(15, 177)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.ScrollAlwaysVisible = True
-        Me.ListBox2.Size = New System.Drawing.Size(640, 264)
+        Me.ListBox2.Size = New System.Drawing.Size(637, 186)
         Me.ListBox2.TabIndex = 4
         '
         'Button2
@@ -175,10 +176,20 @@ Partial Class Form1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "My Github"
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(607, 151)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(45, 20)
+        Me.Button4.TabIndex = 15
+        Me.Button4.Text = "Clear "
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(664, 378)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -224,5 +235,6 @@ Partial Class Form1
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class

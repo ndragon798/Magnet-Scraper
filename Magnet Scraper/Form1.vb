@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class Form1
-
+    Dim sup As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
@@ -19,16 +19,35 @@ Public Class Form1
         '  Dim r = New Regex("magnet:?xt=urn:btih:.*")
         'Dim r = New Regex("<a style=.*background-image: url.*>") href=.*
         Dim r = New Regex("magnet:.*btih.*%3A6969")
+        Dim rn = New Regex("id.*title.*\n.*<.*")
+        ' Dim rn = New Regex("id.*title.*\n        .*<.*div>")
+        Dim matchesn As MatchCollection = rn.Matches(rssourcecode)
         Dim matches As MatchCollection = r.Matches(rssourcecode)
         'If matches.Count.Equals(0) Then
         'Else
         '    ListBox2.Items.Add(matches(1))
         'End If
+        Dim matsn As String
         Try
+            matsn = matchesn(1).ToString.Substring(20)
+            matsn = matsn.Substring(0, matsn.Length - 6)
+        Catch ex As Exception
+
+        End Try
+        Try
+            'ListBox2.Items.Add("S" + xs + "E" + ys)
+            ListBox2.Items.Add(matsn)
             ListBox2.Items.Add(matches(1))
 
         Catch Exc As System.ArgumentOutOfRangeException
-            MsgBox("You probably entered too many episodes or it just can't be found on thepiratebay.la. Just keep clicking OK")
+            If sup.Equals(False) Then
+                MsgBox("You probably miss spelled the name or its just not found.")
+                sup = True
+            Else
+
+            End If
+
+
         End Try
         'For Each url As Match In matches
         '    ListBox1.Items.Add(url)
@@ -45,17 +64,20 @@ Public Class Form1
         'ListBox1.Items.Add("test")
     End Sub
 
+    Dim x As Integer
+    Dim xs As String
+
+    Dim y As Integer
+    Dim ys As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        sup = False
         MsgBox("Please Wait this can take a while if you have a large range")
         TextBox2.Text.Replace(" ", "%20")
-        Dim x As Integer
-        x = NumericUpDown1.Value
-        Dim xs As String
 
-        Dim y As Integer
+        x = NumericUpDown1.Value
+
         y = NumericUpDown3.Value
 
-        Dim ys As String
         Do While x <= NumericUpDown1.Value
             Do While y <= NumericUpDown2.Value
                 If x <= 9 Then
@@ -89,7 +111,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ToolTip1.SetToolTip(TextBox2, "Set a TV Show Name such as Castle 2009")
+
 
     End Sub
 
@@ -123,5 +145,10 @@ Public Class Form1
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Process.Start("https://github.com/ndragon798")
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ListBox2.Items.Clear()
+        Button4.Enabled = False
     End Sub
 End Class
