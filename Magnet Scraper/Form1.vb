@@ -3,6 +3,7 @@
 Public Class Form1
     Dim sup As Boolean
     Dim searches As New ArrayList
+    Dim result3 As DialogResult
 
 
 
@@ -137,10 +138,11 @@ Public Class Form1
         For sear = 0 To searches.Count - 1
             TextBox3.AppendText(searches(sear))
             If sear < searches.Count - 1 Then
-                TextBox3.AppendText(",")
+                TextBox3.AppendText(", ")
             End If
-            TextBox3.AppendText("</b>")
+
         Next
+        TextBox3.AppendText("</b>")
         TextBox3.AppendText("<br>")
         'TextBox3.AppendText(vbNewLine)
 
@@ -154,8 +156,11 @@ Public Class Form1
         Next
         TextBox3.AppendText("</html>")
         SaveFileDialog1.Filter = "HTML Files (*.html)|*.html"
+
+   
         If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, TextBox3.Text, True)
+            Process.Start(SaveFileDialog1.FileName)
         End If
         'Dim w As IO.StreamWriter
         'w = New IO.StreamWriter("export.txt")
@@ -164,12 +169,11 @@ Public Class Form1
         'Next
         'w.Flush()
         'w.Close()
+        Button3.Enabled = False
     End Sub
 
     Private Sub CreateHelpProvider()
-        Dim hlpProvider As HelpProvider
-        hlpProvider = New System.Windows.Forms.HelpProvider()
-        hlpProvider.SetShowHelp(Button3, "This file will be exported as a txt file in the same directory as this program")
+
     End Sub
 
     Private Sub NumericUpDown3_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown3.ValueChanged
@@ -190,6 +194,12 @@ Public Class Form1
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         ListBox2.Items.Clear()
-        Button4.Enabled = False
+        TextBox3.Clear()
+        searches.Clear()
+        TextBox2.Clear()
+        TextBox1.Clear()
+
+        'Button4.Enabled = False
     End Sub
+
 End Class

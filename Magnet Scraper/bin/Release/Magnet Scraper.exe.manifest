@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Magnet Scraper.exe" size="46080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Magnet Scraper.exe" size="45568">
       <assemblyIdentity name="Magnet Scraper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mcHuHO80Q9nBy7ZA55160msvE2c18Zmtiy83MGJS8G8=</dsig:DigestValue>
+        <dsig:DigestValue>VjVIEuKZ5fmrDMrTmhfM7aZF07Vv6xHxiacA85AlinQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

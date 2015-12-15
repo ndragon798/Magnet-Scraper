@@ -194,6 +194,7 @@ Partial Class Form1
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(586, 81)
         Me.TextBox3.TabIndex = 16
+        Me.TextBox3.Visible = False
         '
         'Form1
         '
