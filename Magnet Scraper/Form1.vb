@@ -2,6 +2,10 @@
 
 Public Class Form1
     Dim sup As Boolean
+    Dim searches As New ArrayList
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
@@ -28,23 +32,31 @@ Public Class Form1
         '    ListBox2.Items.Add(matches(1))
         'End If
         Dim matsn As String
+        matsn = ""
         Try
             matsn = matchesn(1).ToString.Substring(20)
             matsn = matsn.Substring(0, matsn.Length - 6)
         Catch ex As Exception
-
+            'MsgBox("MATSN ERROR")
         End Try
         Try
             'ListBox2.Items.Add("S" + xs + "E" + ys)
-            ListBox2.Items.Add(matsn)
-            ListBox2.Items.Add(matches(1))
+            If matsn.Equals("") Then
+            Else
+                ListBox2.Items.Add(matsn)
 
+            End If
+
+            ListBox2.Items.Add(matches(1))
         Catch Exc As System.ArgumentOutOfRangeException
             If sup.Equals(False) Then
                 MsgBox("You probably miss spelled the name or its just not found.")
+                ListBox2.Items.Add("S" + xs + "E" + ys)
+                ListBox2.Items.Add("ERROR")
                 sup = True
             Else
-
+                ListBox2.Items.Add("S" + xs + "E" + ys)
+                ListBox2.Items.Add("ERROR")
             End If
 
 
@@ -70,8 +82,11 @@ Public Class Form1
     Dim y As Integer
     Dim ys As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        searches.Add(TextBox2.Text)
+
         sup = False
         MsgBox("Please Wait this can take a while if you have a large range")
+
         TextBox2.Text.Replace(" ", "%20")
 
         x = NumericUpDown1.Value
@@ -116,13 +131,39 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim w As IO.StreamWriter
-        w = New IO.StreamWriter("export.txt")
-        For i = 0 To ListBox2.Items.Count - 1
-            w.WriteLine(ListBox2.Items.Item(i))
+        TextBox3.Text = ""
+        TextBox3.AppendText("<html>")
+        TextBox3.AppendText("<b>")
+        For sear = 0 To searches.Count - 1
+            TextBox3.AppendText(searches(sear))
+            If sear < searches.Count - 1 Then
+                TextBox3.AppendText(",")
+            End If
+            TextBox3.AppendText("</b>")
         Next
-        w.Flush()
-        w.Close()
+        TextBox3.AppendText("<br>")
+        'TextBox3.AppendText(vbNewLine)
+
+
+        For wr = 1 To ListBox2.Items.Count - 1 Step 2
+            TextBox3.AppendText("<a href=""" + ListBox2.Items.Item(wr).ToString + """>" + ListBox2.Items(wr - 1).ToString + "</a>")
+            TextBox3.AppendText(vbNewLine)
+            TextBox3.AppendText("<br>")
+            'TextBox3.AppendText(vbNewLine)
+            'TextBox3.AppendText(ListBox2.Items.Item(wr).ToString)
+        Next
+        TextBox3.AppendText("</html>")
+        SaveFileDialog1.Filter = "HTML Files (*.html)|*.html"
+        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, TextBox3.Text, True)
+        End If
+        'Dim w As IO.StreamWriter
+        'w = New IO.StreamWriter("export.txt")
+        'For i = 0 To ListBox2.Items.Count - 1
+        '    w.WriteLine(ListBox2.Items.Item(i))
+        'Next
+        'w.Flush()
+        'w.Close()
     End Sub
 
     Private Sub CreateHelpProvider()

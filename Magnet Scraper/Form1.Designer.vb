@@ -41,6 +41,8 @@ Partial Class Form1
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,10 +187,19 @@ Partial Class Form1
         Me.Button4.Text = "Clear "
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(15, 90)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(586, 81)
+        Me.TextBox3.TabIndex = 16
+        '
         'Form1
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(664, 378)
+        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label4)
@@ -236,5 +247,7 @@ Partial Class Form1
     Friend WithEvents HelpProvider1 As System.Windows.Forms.HelpProvider
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
 
 End Class

@@ -13,3 +13,4 @@ c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scra
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.TrustInfo.xml
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.exe.manifest
 c:\users\nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet Scraper.application
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Debug\Magnet_Scraper.Form2.resources

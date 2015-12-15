@@ -14,3 +14,4 @@ C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scra
 C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.exe.manifest
 C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.application
 C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet Scraper.vbprojResolveAssemblyReference.cache
+C:\Users\Nathan\documents\visual studio 2013\Projects\Magnet Scraper\Magnet Scraper\obj\Release\Magnet_Scraper.Form2.resources
