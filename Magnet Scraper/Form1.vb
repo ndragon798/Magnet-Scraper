@@ -83,7 +83,12 @@ Public Class Form1
     Dim y As Integer
     Dim ys As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        searches.Add(TextBox2.Text)
+        If (searches.Contains(TextBox2.Text)) Then
+
+        Else
+            searches.Add(TextBox2.Text)
+        End If
+
 
         sup = False
         MsgBox("Please Wait this can take a while if you have a large range")
@@ -134,6 +139,8 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         TextBox3.Text = ""
         TextBox3.AppendText("<html>")
+        TextBox3.AppendText("<head>")
+        TextBox3.AppendText(" <title>Magnet Scraper</title>")
         TextBox3.AppendText("<b>")
         For sear = 0 To searches.Count - 1
             TextBox3.AppendText(searches(sear))
