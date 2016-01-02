@@ -12,44 +12,34 @@ Public Class Form1
 
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create(TextBox1.Text)
         Dim response As System.Net.HttpWebResponse = request.GetResponse
-
         Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
-
         Dim rssourcecode As String = sr.ReadToEnd
 
 
-        'rssourcecode = Regex.Replace(rssourcecode, "<!(.|\s)*?>", "")
-        'href="magnet:?xt=urn:btih:52bda2d7e89b0a60931a5732e38768474aca8bff&amp;dn=Castle+2009+S02E01+HDTV+XviD-2HD+%5Beztv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
-
-        '  Dim r = New Regex("magnet:?xt=urn:btih:.*")
-        'Dim r = New Regex("<a style=.*background-image: url.*>") href=.*
         Dim r = New Regex("magnet:.*btih.*%3A6969")
         Dim rn = New Regex("id.*title.*\n.*<.*")
-        ' Dim rn = New Regex("id.*title.*\n        .*<.*div>")
+
         Dim matchesn As MatchCollection = rn.Matches(rssourcecode)
         Dim matches As MatchCollection = r.Matches(rssourcecode)
-        'If matches.Count.Equals(0) Then
-        'Else
-        '    ListBox2.Items.Add(matches(1))
-        'End If
         Dim matsn As String
         matsn = ""
+
         Try
             matsn = matchesn(1).ToString.Substring(20)
             matsn = matsn.Substring(0, matsn.Length - 6)
         Catch ex As Exception
-            'MsgBox("MATSN ERROR")
+
         End Try
         Try
-            'ListBox2.Items.Add("S" + xs + "E" + ys)
             If matsn.Equals("") Then
             Else
                 ListBox2.Items.Add(matsn)
-
             End If
 
             ListBox2.Items.Add(matches(1))
+
         Catch Exc As System.ArgumentOutOfRangeException
+
             If sup.Equals(False) Then
                 MsgBox("You probably miss spelled the name or its just not found.")
                 ListBox2.Items.Add("S" + xs + "E" + ys)
@@ -60,21 +50,8 @@ Public Class Form1
                 ListBox2.Items.Add("ERROR")
             End If
 
-
         End Try
-        'For Each url As Match In matches
-        '    ListBox1.Items.Add(url)
-        '    TextBox2.AppendText(url.ToString)
-        'Next
-        'For Each url As Match In matches
-        '    ListBox1.Items.Add(url)
-        '    'MsgBox(url)
-        'Next
 
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        'ListBox1.Items.Add("test")
     End Sub
 
     Dim x As Integer
@@ -83,20 +60,19 @@ Public Class Form1
     Dim y As Integer
     Dim ys As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If (searches.Contains(TextBox2.Text)) Then
 
+        If (searches.Contains(TextBox2.Text)) Then
         Else
             searches.Add(TextBox2.Text)
         End If
 
-
         sup = False
+
         MsgBox("Please Wait this can take a while if you have a large range")
 
         TextBox2.Text.Replace(" ", "%20")
 
         x = NumericUpDown1.Value
-
         y = NumericUpDown3.Value
 
         Do While x <= NumericUpDown1.Value
@@ -111,7 +87,7 @@ Public Class Form1
                 Else
                     ys = y.ToString
                 End If
-                TextBox1.Text() = "http://thepiratebay.la/lucky/" + TextBox2.Text + "%20S" + xs + "E" + ys + "/"
+                 TextBox1.Text() = "http://pirateproxy.pl/lucky/" + TextBox2.Text + "%20S" + xs + "E" + ys + "/"
                 Button1.PerformClick()
 
                 y = y + 1
